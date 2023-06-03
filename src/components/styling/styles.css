@@ -4,6 +4,22 @@
     font-family: "Jost", sans-serif;
 }
 
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+:-moz-placeholder {
+    font-style: italic;
+}
+
+::-moz-placeholder {
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    font-style: italic;
+}
+
 body {
     background: #f3f2ef;
     display: flex;
@@ -74,6 +90,19 @@ html {
     height: 100%;
     z-index: 11;
     transform: translate3d(0, 0, 0);
+}
+
+.inputField{
+    margin-top: 5rem;
+    border-radius: 25px;
+    padding:5px
+}
+
+.no-data{
+    margin-top: 5rem;
+    color: royalblue;
+    font-weight: 800;
+    font-size: 3.5rem;
 }
 
 @keyframes drift {
