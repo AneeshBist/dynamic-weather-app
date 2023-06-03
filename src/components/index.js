@@ -8,7 +8,7 @@ const Component = (props) => {
   const [search, setSearch] = useState(DEFAULT_CITY);
 
   useEffect(() => {
-    const fetchApi = async () => {
+    (async () => {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=219e680aeb5a2cab7cf3cccec33e903e`;
       const response = await fetch(url);
       const resJson = await response.json();
@@ -17,8 +17,7 @@ const Component = (props) => {
       } else {
         setCity(resJson);
       }
-    };
-    fetchApi();
+    })();
   }, [search]);
 
   return (
